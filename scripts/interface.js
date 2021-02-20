@@ -12,10 +12,16 @@ function handleClick(event){
     let position = house.id
 
     handleMove(position)
-    updateHouse()
+    updateHouse(position)
 }
 
-function updateHouse(){
+function updateHouse(position){
+    const house = document.getElementById(position.toString())
+    let symbol = board[position]
+    house.innerHTML = `<div class='${symbol}'></div>`
+}
+
+function updateHouses(){
     const house = document.querySelectorAll(".house")
 
     house.forEach((house)=>{
