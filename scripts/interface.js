@@ -1,8 +1,13 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     const house = document.querySelectorAll(".house")
+    const resetHouse = document.querySelectorAll(".reset")
 
     house.forEach((house)=>{
         house.addEventListener('click', handleClick)
+    })
+
+    resetHouse.forEach((resetHouse) => {
+        resetHouse.addEventListener('click', resetHouses)
     })
 })
 
@@ -21,15 +26,23 @@ function updateHouse(position){
     house.innerHTML = `<div class='${symbol}'></div>`
 }
 
-function updateHouses(){
+function resetHouses(){
+    resetHousesLets()
+    updateResetHouses()
+}
+    
+
+
+function updateResetHouses(){
     const house = document.querySelectorAll(".house")
+    let position = house.id
 
     house.forEach((house)=>{
-        let position = house.id
         let symbol = board[position]
 
-        if (symbol != '') {
+        if (!symbol) {
             house.innerHTML = `<div class='${symbol}'></div>`
         }
     })
 }
+

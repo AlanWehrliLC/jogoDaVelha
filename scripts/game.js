@@ -1,8 +1,8 @@
 // iniciar as variáveis
 let board = ['','','','','','','','','']
-let playerTime = 1
-const symbols = ['o', 'x']
+let playerTime = 0
 let gameOver = false
+const symbols = ['o', 'x']
 
 let winStates = [
     [0,1,2],
@@ -59,4 +59,10 @@ function isWin(){
     }
 
     return false
+}
+
+function resetHousesLets(){
+    board = ['','','','','','','','','']
+    playerTime = 0
+    gameOver = false
 }
