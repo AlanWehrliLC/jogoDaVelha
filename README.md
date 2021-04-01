@@ -7,7 +7,7 @@ Projeto desenvolvido no curso do programadorBR
 </br>
 
 <p align="center">
-  <img alt="gifJogoDaVelha" src="./assets/gifJogoDaVelha.gif" width="100%">
+  <img alt="gifJogoDaVelha" src="./assets/gifJogoDaVelha.gif" width="50%">
 </p>
 
 <p align="center">
